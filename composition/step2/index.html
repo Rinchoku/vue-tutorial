@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <script type="module">
+      const { createApp, ref, reactive } = Vue
+
+      createApp({
+        setup() {
+          const counter = reactive({count: 0})
+          const title = ref('Make me Dynamic')
+
+          return {
+            counter,
+            title,
+          }
+        }
+      }).mount('#app')
+    </script>
+
+    <div id="app">
+      <h1>{{ title }}</h1>
+      <p>count: {{ counter.count }}</p>
+    </div>
+</html>
