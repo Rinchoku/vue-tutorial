@@ -14,3 +14,11 @@ Vue Composition APIのチュートリアル用
 
 reactive：オブジェクトのみ
 ref：任意の値の型
+
+## Step3
+
+属性バインディング(v-bind)
+
+## Step4
+
+イベントリスナー(v-on)

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <script type="module">
+      const { createApp, ref } = Vue
+
+      createApp({
+        setup() {
+          const count = ref(0)
+
+          function increment () {
+            count.value++;
+          };
+
+          return {
+            count,
+            increment
+          }
+        }
+      }).mount('#app')
+    </script>
+
+    <div id="app">
+      <!-- make this button work -->
+      <button @click="increment">count is: {{ count }}</button>
+    </div>
+</html>
