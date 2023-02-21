@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <link rel="stylesheet" href="./style.css"></link>
+    </head>
+
+    <script type="module">
+      const { createApp, ref } = Vue
+
+      createApp({
+        setup() {
+          const titleClass = ref('title')
+
+          return {
+            titleClass
+          }
+        }
+      }).mount('#app')
+    </script>
+
+    <div id="app">
+      <h1 :class="titleClass">Make me red</h1> <!-- add dynamic class binding here -->
+    </div>
+</html>
