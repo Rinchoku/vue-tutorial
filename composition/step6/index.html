@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <script type="module">
+      const { createApp, ref } = Vue
+
+      createApp({
+        setup() {
+          const awesome = ref(true)
+
+          function toggle() {
+            awesome.value = !awesome.value;
+          }
+
+          return {
+            awesome,
+            toggle
+          }
+        }
+      }).mount('#app')
+      </script>
+
+      <div id="app">
+        <button @click="toggle">toggle</button>
+        <h1 v-if="awesome">Vue is awesome!</h1>
+        <h1 v-else>Oh no 😢</h1>
+      </div>
+</html>
