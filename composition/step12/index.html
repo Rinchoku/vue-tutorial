@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <script type="module">
+      const { createApp, components, ref } = Vue
+      import ChildComponent from './ChildComp.js'
+
+      createApp({
+        components: {
+          ChildComponent
+        },
+        setup() {
+          const greeting = ref('Hello from parent')
+
+          return {
+            greeting,
+          }
+        }
+      }).mount('#app')
+      </script>
+
+      <div id="app">
+        <child-component :msg="greeting"></child-component>
+      </div>
+</html>
