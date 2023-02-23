@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <script type="module">
+      const { createApp, ref, onMounted } = Vue
+
+      createApp({
+        setup() {
+          const p = ref(null)
+
+          onMounted(() => {
+            p.value.textContent = 'Hello World';
+          });
+
+          return {
+            p
+          }
+        }
+      }).mount('#app')
+      </script>
+
+      <div id="app">
+        <p ref="p">hello</p>
+      </div>
+</html>
